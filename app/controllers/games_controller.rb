@@ -3,6 +3,10 @@ require 'open-uri'
 class GamesController < ApplicationController
   VOWELS = %w(A E I O U Y)
 
+  def home
+  end
+
+
   def new
     @letters = Array.new(5) { VOWELS.sample }
     @letters += Array.new(5) { (('A'..'Z').to_a - VOWELS).sample }
